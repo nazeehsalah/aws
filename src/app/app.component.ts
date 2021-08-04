@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
-import {
-  AuthenticationDetails,
-  CognitoUser,
-  CognitoUserAttribute,
-  CognitoUserPool
-} from 'amazon-cognito-identity-js';
+import { AuthenticationDetails, CognitoUser, CognitoUserAttribute, CognitoUserPool } from 'amazon-cognito-identity-js';
+import * as AWS from 'aws-sdk'
 
 @Component({
   selector: 'app-root',
@@ -18,7 +14,7 @@ export class AppComponent {
     // public authDe:AuthenticationDetails,
     // public userPool:CognitoUserPool
   ) {
-
+    
     let poolData = {
       UserPoolId: 'us-east-1_ju23D3Hti', // Your user pool id here
       ClientId: '5lp0ihnuvr0g7pc2n2hcvq5vhh', // Your client id here
